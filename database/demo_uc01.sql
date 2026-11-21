@@ -1,4 +1,3 @@
--- Demo-only test records. Run AFTER schema.sql. IDs chosen to match example UI values.
 USE smartfix_ai;
 INSERT INTO users(user_id,name,email,password_hash,role) VALUES
 (1,'Demo Client','client-demo@smartfix.test','DEMO-NOT-A-REAL-PASSWORD','CLIENT'),
@@ -9,4 +8,3 @@ INSERT INTO technicians(technician_id,specialization,skills,location,availabilit
 INSERT INTO maintenance_requests(request_id,client_id,technician_id,description,issue_category,severity_level,priority_level,status,location)
 VALUES(1,1,2,'AC not cooling','AC','MEDIUM','MEDIUM','ASSIGNED','Abu Dhabi')
 ON DUPLICATE KEY UPDATE description=VALUES(description);
--- To reset demo status manually, clear notifications/history for request #1, then set status to ASSIGNED.
