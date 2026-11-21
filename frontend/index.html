@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix AI | Maintenance Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SmartFix AI</h1>
+        <p>Maintenance Request Management System</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Technician Dashboard</h2>
+            <p>View and update your assigned maintenance requests.</p>
+
+            <button id="loadRequests">View Assigned Requests</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Issue</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="requestsTable"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Track Maintenance Request</h2>
+            <p>Check the latest status of a maintenance request.</p>
+
+            <input type="number" id="trackId"
+                   placeholder="Enter Request ID" min="1">
+
+            <button id="trackButton">Track Request</button>
+
+            <div id="trackingResult"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
